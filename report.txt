@@ -1,0 +1,117 @@
+Name: Deepak Chahar
+Student ID: 2017A7PS0147P
+BITS Email: f20170147@pilani.bits-pilani.ac.in
+Wikipedia file used: AF/wiki_47
+
+***********************IMPORTANT***************************
+non-alhabet and non-numeric tokens are discarded from result
+
+
+Answer 1: 
+
+
+a) 64878
+b) The distribution plot is available in image Unigrams.png
+c) 10314
+
+Answer 2:
+a) 563561
+b) The distribution plot is available in image Bigrams.png
+c) 308869
+
+
+Answer 3:
+a) 1025190
+b) The distribution plot is available in image Trigrams.png
+c) 643153
+
+Answer 4:
+a) Unigram analysis after stemming
+  i) 49701
+  ii) The distribution plot is available in image 'Stemmed Unigrams.png'
+  iii) 5639
+
+b) Bigram analysis after stemming
+  i) 514079
+  ii) The distribution plot is available in image 'Stemmed Bigrams.png'
+  iii) 259387
+
+c) Trigram analysis after stemming
+  i) 1006391
+  ii) The distribution plot is available in image 'Stemmed Trigrams.png'
+  iii) 624354
+
+Answer 5:
+a) Unigram analysis after lemmatization
+  i) 59265
+  ii) The distribution plot is available in image 'Lemmatized Unigrams.png'
+  iii) 8278
+
+b) Bigram analysis after lemmatization
+  i) 539489
+  ii) The distribution plot is available in image 'Lemmatized Bigrams.png'
+  iii) 284797
+
+c) Trigram analysis after lemmatization
+  i) 1015901
+  ii) The distribution plot is available in image 'Lemmatized Trigrams.png'
+  iii) 633864
+
+Answer 6:
+All the analysis done on tokens(ie unigram,bigram or even trigrams) follows Zipf's law (even after tokenization or lemmatization) as it can be seen as an approximate straight line in Loglog graphs in  'images' directory.
+
+Answer 7:
+Dates and currency are not properly tokenized, moreover Abbrevations should be kept joined but is splitted.
+example: 
+i) 'Mr.' to 'Mr' and '.'
+ii) 6,February,2005 to '6',','February',','2005'
+iii) "U.S.A." word is tokenized as 'U','.','S','.','A','.'
+
+
+Answer 8:
+Library used for tokenization is nltk:
+
+Tokenization : word_tokenize - It uses improved version of PunktSentenceTokenizer and TreebankWordTokenizer.
+Example: it splits on white spaces,'"', "'" etc. as defined by nltk official specifications.
+
+stemming : PorterStemmer()
+It replaces the word by it root word by removing/replacing the last characters.
+logi  →  log,bli  →  ble,move → mov etc..
+ 
+lemmatization : WordNetLemmatizer()
+It tries to integrate structured semantic relationships between words into coverting tokens into POS-tag by refering to predefined english dictionary.
+
+
+
+Answer 9:
+Tool used is nltk.word_tokenize
+Input string : "5/10/12  1/1/1 500Rs 600$ 6,feb,2018  march,23,2015" is toknized as: 
+['5/10/12', '1/1/1', '500Rs', '600', '$', '6', ',', 'feb,2018', 'march,23,2015']
+i) 500Rs is tokenized as 500Rs
+ii) 600$ is tokenized as '600' and '$' as $ is treated as a delimiter.
+iii) 6,feb,2018 as '6', ',', 'feb,2018'
+iv) march,23,2015 as 'march,23,2015'
+v) dd/mm/yy or dd/mm/yyyy format is best recognized as can be seen in 5/10/12 to '5/10/12' conversion.
+
+Answer 10:
+The top 20 bi-grams obtained using the Chi-square test.
+1 ('hinrich', 'warrelmann')
+2 ('hessy', 'nesbitt')
+3 ('vtv7', 'vtv8')
+4 ('tihaka', 'waipango')
+5 ('olimpo', 'cárdenas')
+6 ('maura', 'barraza')
+7 ('mariska', 'majoor')
+8 ('ludovica', 'tecla')
+9 ('exeunt', 'omnes')
+10 ('herbalists', 'stembark')
+11 ('rooke', 'gummidge')
+12 ('ursus', 'americanus')
+13 ('kota', 'anggrik')
+14 ('garrigue', 'masaryk')
+15 ('stewartsville', 'hemple')
+16 ('chameleons', 'ellery')
+17 ('katha', 'pollitt')
+18 ('toa', 'payoh')
+19 ('xcruiser', 'xdsr385hd')
+20 ('jirků', 'janků')
